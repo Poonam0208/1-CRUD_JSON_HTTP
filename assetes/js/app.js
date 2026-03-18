@@ -56,7 +56,7 @@ function fetchPosts(){
         cl(err);
     })
     .finally(()=>{
-        spinner.classList.add('d-none');
+        spinner.classList.remove('d-none');
     })
 }
 fetchPosts();
