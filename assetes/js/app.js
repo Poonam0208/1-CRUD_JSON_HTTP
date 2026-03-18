@@ -39,7 +39,7 @@ function CreatePostCard(arr){
 
 
 function fetchPosts(){
-    spinner.classList.remove('d-none');
+    spinner.classList.add('d-none');
   fetch(POST_URL)
     .then(res=>{
        return res.json()
