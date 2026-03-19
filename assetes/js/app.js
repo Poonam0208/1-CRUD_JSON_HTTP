@@ -40,7 +40,14 @@ function CreatePostCard(arr){
 
 function fetchPosts(){
     spinner.classList.remove('d-none');
-  fetch(POST_URL)
+  fetch(POST_URL,{
+    method : 'GET',
+    body : null,
+    headers : {
+        'content-type' : 'aplication/json',
+        'auth': 'Token from Local Strorege'
+    }
+  })
     .then(res=>{
        return res.json()
     })
