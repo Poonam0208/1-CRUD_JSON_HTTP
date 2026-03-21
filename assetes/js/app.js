@@ -97,7 +97,7 @@ function onPostSubmit(eve){
              Auth : 'Token from LS'
         }
     }
-    spinner.classList.remove('d-none');
+    spinner.classList.add('d-none');
     fetch(POST_URL, configobj)
        .then(res=>{
         return res.json()
@@ -126,7 +126,7 @@ function onPostSubmit(eve){
         
         `
         PostContainer.prepend(col);
-        snackBar(`The Post card with Id ${data.name} Added Successfully !!!`, `success`);
+        snackBar(`The Post card Added Successfully !!!`, `success`);
        })
        .catch(err =>{
            cl(err)
